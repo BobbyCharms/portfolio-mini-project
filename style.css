@@ -16,7 +16,7 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 10px;
     background-color: rgb(7, 7, 59);
@@ -27,18 +27,26 @@ nav {
     display: flex; 
 }
 
+h1 {
+    margin: 10px 0 0 0;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 /*  Future project: us CSS reset to remove padding-inline-start */
 ul {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    justify-content: center;
     list-style: none;
     padding-inline-start: 0px;
     font-weight: bold;
 }
 
 li {
-    margin: 0;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 10px 0;
     padding: 0 0 0 10px;
 }
 
@@ -46,15 +54,28 @@ li {
     width: 100%;
 }
 
-.title {
-    font-weight: bold;
-    font-size: larger;
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
+
+/* To add for desktop sizing  */
+/* aside {
+    padding: 0 40px 0 0 ;
+} */
+
+figure {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex: 1 0 400px;
+    margin: 10px;
+    padding 10px;
+    border: 2px dashed;
+    border-color: black;
+}
+
 
 @media screen and (min-width: 2000px) {
     html {
