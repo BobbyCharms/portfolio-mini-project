@@ -9,6 +9,7 @@ html {
 body {
  display: flex;
  flex-direction: column;
+ justify-content: center;
  font-family: Helvetica, sans-serif;
  margin: 0;
 }
@@ -24,19 +25,41 @@ header {
 
 nav {
     display: flex; 
-    text-align: center;
-
 }
 
+/*  Future project: us CSS reset to remove padding-inline-start */
 ul {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     list-style: none;
+    padding-inline-start: 0px;
+    font-weight: bold;
 }
 
 li {
     margin: 0;
-    padding: 10px;
-    
+    padding: 0 0 0 10px;
 }
 
+.hero {
+    width: 100%;
+}
+
+.title {
+    font-weight: bold;
+    font-size: larger;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 2000px) {
+    html {
+        width: 80%;
+        margin: auto;
+    }
+    
+}
