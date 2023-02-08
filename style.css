@@ -1,4 +1,6 @@
 :root {
+    --mobile-padding: 0 10px 0 10px;
+}
 
 }
 
@@ -23,14 +25,14 @@ header {
     color: white;
 }
 
-nav {
-    display: flex; 
-}
-
 h1 {
     margin: 10px 0 0 0;
     text-decoration: underline;
     font-weight: bold;
+}
+
+nav {
+    display: flex; 
 }
 
 /*  Future project: us CSS reset to remove padding-inline-start */
@@ -40,7 +42,7 @@ ul {
     justify-content: center;
     list-style: none;
     padding-inline-start: 0px;
-    font-weight: bold;
+
 }
 
 li {
@@ -50,8 +52,16 @@ li {
     padding: 0 0 0 10px;
 }
 
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
 .hero {
     width: 100%;
+    padding: 0 0 20px 0;
+
 }
 
 section {
@@ -60,10 +70,10 @@ section {
     text-align: center;
 }
 
-/* To add for desktop sizing  */
-/* aside {
-    padding: 0 40px 0 0 ;
-} */
+article {
+    text-align: start;
+    padding: var(--mobile-padding)
+}
 
 figure {
     display: flex;
@@ -76,11 +86,64 @@ figure {
     border-color: black;
 }
 
+form {
+    text-align: start;
+    padding: var(--mobile-padding)
+}
+
+footer {
+    text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+    header {
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    nav {
+    }
+
+    ul {
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+
+    li {
+        display: flex;
+        display: inline-block;
+        margin: 0 10px 0 0;
+    }
+
+    section {
+        flex-direction: row;
+        padding: 0 0 20px 0;
+    }
+
+    aside {
+        width: 200px;
+        white-space: nowrap;
+        padding: 0 15px 0 100px;
+        text-align: end;
+        border-right: solid black 2px;
+    }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .primary {
+        width: 100%;
+
+    }
+
+}
+
 
 @media screen and (min-width: 2000px) {
     html {
         width: 80%;
         margin: auto;
     }
-    
 }
